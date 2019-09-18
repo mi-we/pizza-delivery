@@ -27,7 +27,7 @@ public enum WebDriverHolder {
      * Only call this after a use case context has been created for the current use case.
      */
     public void openBrowserAndRegisterEventListener() {
-        WebDriverManager.phantomjs().setup();
+        WebDriverManager.chromedriver().setup();
         webDriver = new EventFiringWebDriver(new ChromeDriver());
 
         UseCaseContext useCaseContext = UseCaseContextHolder.INSTANCE.getUseCaseContext();
