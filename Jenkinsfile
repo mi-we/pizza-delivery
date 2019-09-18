@@ -1,15 +1,22 @@
-node {
 
-    stage("build software") {
-        sh "./gradlew clean test"
-    }
+timestamps {
+    node {
 
-    stage("upload documentation") {
-    }
+        stage("checkout") {
+            checkout scm
+        }
 
-    stage("wait for comparison") {
-    }
+        stage("build software") {
+            sh "./gradlew clean test"
+        }
 
-    stage("verify comparison") {
+        stage("upload documentation") {
+        }
+
+        stage("wait for comparison") {
+        }
+
+        stage("verify comparison") {
+        }
     }
 }
