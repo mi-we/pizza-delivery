@@ -1,6 +1,7 @@
 node {
 
     stage("build software") {
+        sh "gradle clean test"
     }
 
     stage("upload documentation") {
